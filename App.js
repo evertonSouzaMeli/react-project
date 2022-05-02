@@ -1,35 +1,33 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, TextInput } from 'react-native';
+import { Button } from 'react-native-web';
 
 export default class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      mensagem: ""
-    }
-  }
 
-mudaTexto = text => {
-  this.setState({mensagem: text})
-}
-
-  render(){
-  return (
-    <View style={styles.container}>
-      <TextInput onBlur={false} onChangeText={this.mudaTexto} placeholder={"digite seu texto aqui"}/>
-      <Text>{this.state.mensagem}</Text>
-    </View>
-  );
+  render() {
+    return (
+      <View style={styles.container}>
+       
+      </View>
+    );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#CDCD',
+    backgroundColor: '#F5F5F5',
     alignContent: 'center',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center'
+  }, input: {
+    padding: 5,
+    margin: 10,
+    width: '300px'
+  }, button: {
+    padding: 5,
+    margin: 20,
   }
 })
+
